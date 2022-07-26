@@ -1,0 +1,16 @@
+# update可能是比较常用的，每次启动的时候会看看实体类有什么变化，然后看需不需要更改表结构
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb # h2 database 連接位址
+    driver-class-name: org.h2.Driver # 配置driver
+    username: sa # database 用戶名
+    password:  # database 密碼
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
